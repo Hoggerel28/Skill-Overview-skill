@@ -1,30 +1,29 @@
 ﻿---
 name: skill-overview
-description: Pre-work selection gate for choosing plugins, skills, and subagents before development, creation, debugging, analysis, configuration, installation, or other multi-step tasks. Use when a user asks to start work, asks what skill/plugin/subagent to use, explicitly invokes a skill or plugin but related capabilities may also be relevant, or wants Chinese explanations of available capabilities. This skill should run before applying other plugins/skills/subagents when possible: analyze the request, list candidate capabilities in Chinese grouped sections with unified numbers, pause, and wait for the user to choose before continuing.
+description: Pre-work selection gate for choosing plugins, skills, and subagents before development, creation, debugging, analysis, configuration, installation, deployment, or other multi-step tasks. Use when a user wants help deciding what capability to use, when multiple skills/plugins may apply, when a skill or plugin is explicitly mentioned but related options may also matter, or when Chinese explanations of available capabilities are needed. Before using other plugins/skills/subagents, list candidates in Chinese, grouped by type with unified numbering, then pause and wait for the user to choose.
 ---
 
 # Skill Overview
 
 ## 目标
 
-在正式开发、创作、分析、调试、安装、配置前，先帮用户看清可能用到的插件、技能和 subagent，避免自动隐式匹配到不合适的能力。
+先选能力，再做任务。
 
-此技能是选择门，不是执行门。输出候选清单后必须暂停，等用户用编号确认，再继续真正执行任务。
+帮用户看清可能用到的插件、技能和 subagent，避免自动隐式匹配到不合适的能力。
 
-## 使用流程
+这是选择门，不是执行门。输出候选清单后必须暂停，等用户用编号确认，再继续真正执行任务。
+
+## 输出要求
 
 1. 先用一句话复述任务目标。
-2. 分析任务可能涉及的能力类型：插件、技能、subagent。
-3. 把候选项按区域分组列出：插件、技能、subagent。
-4. 所有候选项使用统一连续编号，例如 1、2、3、4，不要每个区域重新编号。
-5. 用中文简要说明每项用途、推荐理由和适用边界。
-6. 标出推荐组合，但不要替用户直接决定。
-7. 暂停并询问用户选择哪些编号。
-8. 用户确认前，不要开始开发、创作、批量修改、安装、部署、付款、授权、发送消息或删除操作。
+2. 把候选项分成三块：插件、技能、subagent。
+3. 所有候选项连续编号，不要分区重置编号。
+4. 每项都用中文写清用途、推荐度、适合边界。
+5. 主动点名的插件/技能也要继续补充相关候选项。
+6. 输出后暂停，等用户用编号确认。
+7. 用户确认前，不要进入开发、创作、批量修改、安装、部署、付款、授权、发送消息或删除操作。
 
-## 选择面板格式
-
-使用下面格式，保持简洁：
+### 选择面板格式
 
 ```md
 任务目标：...
@@ -32,19 +31,16 @@ description: Pre-work selection gate for choosing plugins, skills, and subagents
 --- 插件 ---
 | 编号 | 名称 | 推荐度 | 中文说明 | 建议 |
 |---:|---|---|---|---|
-| 1 | plugin-name | 高 | 用来... | 建议启用 |
 
 --- 技能 ---
 | 编号 | 名称 | 推荐度 | 中文说明 | 建议 |
 |---:|---|---|---|---|
-| 2 | skill-name | 高 | 用来... | 建议启用 |
 
 --- Subagent ---
 | 编号 | 名称 | 推荐度 | 中文说明 | 建议 |
 |---:|---|---|---|---|
-| 3 | frontend-developer | 中 | 适合... | 可选 |
 
-推荐组合：1 + 2
+推荐组合：...
 请回复编号，例如：选 1、2；或回复 不使用，直接继续。
 ```
 
