@@ -1,6 +1,6 @@
 ﻿---
 name: skill-overview
-description: Pre-work selection gate for choosing plugins, skills, and subagents before development, creation, debugging, analysis, configuration, installation, deployment, or other multi-step tasks. Use when a user wants help deciding what capability to use, when multiple skills/plugins may apply, when a skill or plugin is explicitly mentioned but related options may also matter, or when Chinese explanations of available capabilities are needed. Before using other plugins/skills/subagents, list candidates in Chinese, grouped by type with unified numbering, then pause and wait for the user to choose.
+description: Choose plugins, skills, and subagents before starting work. Use before development, debugging, analysis, writing, setup, install, deployment, or any multi-step task. List candidate capabilities in Chinese, group them by type, use one shared numbering sequence, pause, and wait for the user to choose before continuing.
 ---
 
 # Skill Overview
@@ -106,3 +106,4 @@ description: Pre-work selection gate for choosing plugins, skills, and subagents
 - 给出清楚可选项。
 - 不要假装有系统级强制能力。
 - 如果此技能无法保证优先触发，要坦诚说明：它只能提高命中率，真正稳定需要配合 AGENTS.md 或用户主动 `$skill-overview`。
+

@@ -1,6 +1,6 @@
 ﻿interface:
   display_name: "Skill Overview"
-  short_description: "开发前先中文总览候选插件技能子代理"
+  short_description: "Choose capabilities before work starts"
   default_prompt: "Use $skill-overview to list candidate plugins, skills, and subagents in Chinese before starting work."
 policy:
   allow_implicit_invocation: true
