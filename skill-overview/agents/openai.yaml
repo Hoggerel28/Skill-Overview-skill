@@ -1,4 +1,4 @@
-﻿interface:
+interface:
   display_name: "Skill Overview"
   short_description: "Choose capabilities before work starts"
   default_prompt: "Use $skill-overview to list candidate plugins, skills, and subagents in Chinese before starting work."
