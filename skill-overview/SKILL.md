@@ -1,4 +1,4 @@
-﻿---
+---
 name: skill-overview
 description: Choose plugins, skills, and subagents before starting work. Use before development, debugging, analysis, writing, setup, install, deployment, or any multi-step task. List candidate capabilities in Chinese, group them by type, use one shared numbering sequence, pause, and wait for the user to choose before continuing.
 ---
